@@ -1,0 +1,43 @@
+
+
+
+<ScreenOne>:
+	Image:
+		source:"enter.jpg"
+	
+	Button:
+		text:"enter"
+		font_size:20
+		color:(0,1,0,1)
+		size_hint:(.2,.2)
+		pos:(100, 100)
+		on_press:root.manager.current="screen2"
+		
+		
+<ScreenTwo>:
+	Image:
+		source:"wonderland.jpg"
+	
+	Label:
+		text:"Here are the rules"
+		color:(0,1,1,1)
+		font_size:25
+		
+
+
+
+<Manager>:
+	id: screen_manager
+	
+	screen_one: screen_one
+	screen_two: screen_two
+
+	ScreenOne:
+		id:screen_one
+		name:'screen1'
+		manager:screen_manager
+				
+	ScreenTwo:
+		id:screen_two
+		name:'screen2'
+		manager:screen_manager
